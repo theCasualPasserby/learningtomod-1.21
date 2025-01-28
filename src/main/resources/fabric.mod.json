@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "learningtomod",
+	"version": "${version}",
+	"name": "LearningToMod",
+	"description": "Learning and practicing modding minecraft",
+	"authors": [
+		"CasualPasserby, theCasualPasserby, Casual_Passerby"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/learningtomod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.casualpasserby.learningtomod.LearningToMod"
+		],
+		"fabric-datagen": [
+			"net.casualpasserby.learningtomod.LearningToModDataGenerator"
+		],
+		"client": [
+			"net.casualpasserby.learningtomod.LearningToModClient"
+		]
+	},
+	"mixins": [
+		"learningtomod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
