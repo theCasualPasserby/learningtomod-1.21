@@ -1,11 +1,12 @@
 package net.casualpasserby.learningtomod;
 
+import net.casualpasserby.learningtomod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class LearningToMod implements ModInitializer {
+public class LearningToMod implements ModInitializer { //Main Class
 	public static final String MOD_ID = "learningtomod";
 
 	// This logger is used to write text to the console and the log file.
@@ -15,10 +16,6 @@ public class LearningToMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
-
-		LOGGER.info("Hello Fabric world!");
+		ModItems.registerModItems();
 	}
 }
